@@ -62,8 +62,8 @@
         <div class="follow-me">
           <h5>FOLLOW ME</h5>
           <ul>
-            <li><a href="" >Github</a></li>
-            <li><a href="" >Instagram</a></li>
+            <li><a href="https://github.com/alanoconner" >Github</a></li>
+            <li><a href="https://instagram.com/ara._.aran" >Instagram</a></li>
           </ul>
         </div>
       </div>
