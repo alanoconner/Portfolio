@@ -94,14 +94,14 @@
       <div class="my-skills">
         <h1>MY SKILLS</h1>
         <ul>
-          <li><img src="src/components/icons/java-logo.png" alt="Java"></li>
-          <li><img src="src/components/icons/js-logo.png" alt="Javascript"></li>
-          <li><img src="src/components/icons/ts-logo.png" alt="Typescript"></li>
-          <li><img src="src/components/icons/kotlin-logo.png" alt="Kotlin"></li>
-          <li><img src="src/components/icons/mysql-logo.png" alt="MySQL"></li>
-          <li><img src="src/components/icons/python-logo.png" alt="Python"></li>
-          <li><img src="src/components/icons/php-logo.png" alt="PHP"></li>
-          <li><img src="src/components/icons/aws.png" alt="AWS"></li>
+          <li><img src="src/components/icons/java-logo.png" alt="Java" title="Java"></li>
+          <li><img src="src/components/icons/js-logo.png" alt="Javascript" title="Javascript"></li>
+          <li><img src="src/components/icons/ts-logo.png" alt="Typescript" title="Typescript"></li>
+          <li><img src="src/components/icons/kotlin-logo.png" alt="Kotlin" title="Kotlin"></li>
+          <li><img src="src/components/icons/mysql-logo.png" alt="MySQL" title="MySQL"></li>
+          <li><img src="src/components/icons/python-logo.png" alt="Python" title="Python"></li>
+          <li><img src="src/components/icons/php-logo.png" alt="PHP" title="PHP"></li>
+          <li><img src="src/components/icons/aws.png" alt="AWS" title="AWS"></li>
         </ul>
       </div>
 
@@ -118,7 +118,7 @@
               <p class="portfolio-year">STARS CAFE / 2023</p>
               <h2 class="portfolio-name">Coffee Shop <br> Website</h2>
               <div class="portfolio-link">
-                <a href="">check on github</a>
+                <a href="https://github.com/alanoconner/stars-cafe">check on github</a>
                 <img src="src/components/go-to-btn.png" width="65">
               </div>
             </div>
@@ -131,7 +131,7 @@
               <p class="portfolio-year">VAADIN APP / 2021</p>
               <h2 class="portfolio-name">Ticket Reservation <br> Website</h2>
               <div class="portfolio-link">
-                <a href="">check on github</a>
+                <a href="https://github.com/alanoconner/java_Vaadin_ReservationApp">check on github</a>
                 <img src="src/components/go-to-btn.png" width="65">
               </div>
             </div>
@@ -144,7 +144,7 @@
               <p class="portfolio-year">JAVA MESSENGER / 2020</p>
               <h2 class="portfolio-name">Desktop Messenger <br> Application</h2>
               <div class="portfolio-link">
-                <a href="">check on github</a>
+                <a href="https://github.com/alanoconner/java_messenger">check on github</a>
                 <img src="src/components/go-to-btn.png" width="65">
               </div>
             </div>
@@ -187,30 +187,31 @@
         <h1>
           CONTACT ME
         </h1>
-        <div class="form">
+        <form class="form" @submit.prevent="submitForm">
           <div class="form-first-row">
             <div class="form-first-row-column-1">
               <label for="input-1">Name</label>
-              <input type="text" id="input-1" name="contact-name" required placeholder="Full name">
+              <input v-model="name" type="text" id="input-1" name="contact-name" required placeholder="Full name">
             </div>
             <div class="form-first-row-column-2">
               <label for="input-2">Email</label>
-              <input type="text" id="input-2" name="contact-email" required placeholder="exapmle@yourmail.com">
+              <input v-model="email" type="text" id="input-2" name="contact-email" required placeholder="exapmle@yourmail.com">
             </div>
           </div>
           <div class="form-second-row">
             <label for="message">Message</label>
-            <textarea id="message" placeholder="Enter your message..."></textarea>
+            <textarea v-model="message" id="message" placeholder="Enter your message..."></textarea>
           </div>
-        </div>
 
-        <button id="send-message-btn">SEND MESSAGE</button>
+          <button id="send-message-btn" type="submit">SEND MESSAGE</button>
+        </form>
+
 
       </div>
 
     </main>
     <footer>
-      Copyright &copy; Akhmadullin Azamat
+      All rights reserved &copy; 2023
     </footer>
   </div>
 </template>
@@ -220,6 +221,9 @@ export default {
   data() {
     return {
       rotationAngle: 0, // Initial rotation angle
+      name: '',
+      email: '',
+      message: '',
     };
   },
   mounted() {
@@ -255,6 +259,34 @@ export default {
           behavior: 'smooth', // Use smooth scrolling
           block: 'start', // Align the top of the element to the top of the viewport
         });
+      }
+    },
+    async submitForm() {
+      try {
+        const response = await fetch('http://localhost:3000/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          }),
+        });
+
+        // const data = await response.json();
+        const data = "A";
+
+
+        if (response.ok) {
+          console.log('Email sent successfully:', data);
+          // Optionally, you can reset the form fields here
+        } else {
+          console.error('Error sending email:', data);
+        }
+      } catch (error) {
+        console.error('Error:', error);
       }
     },
   },

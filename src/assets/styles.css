@@ -220,6 +220,10 @@
     display: flex;
 }
 
+.portfolio-ul-li-img img {
+    transition: transform 0.5s ease;
+}
+
 .portfolio-ul-li-text {
     margin: auto;
     /*border: 2px solid red;*/
@@ -241,6 +245,7 @@
     padding-top: 32px;
     width: 330px;
     z-index: 2;
+    transition: transform 0.5s ease;
 }
 
 .portfolio-link a {
@@ -259,6 +264,15 @@
     top: 16px;
     right: 25px;
     z-index: -1;
+
+}
+
+.portfolio-link:hover {
+    transform: translateX(30px);
+}
+
+.portfolio-ul-li-img img:hover {
+    transform: scale(1.05);
 }
 
 .services {
@@ -423,11 +437,12 @@
 }
 
 .form {
-    height: 50%;
+    height: 70%;
     width: 80%;
     display: flex;
     flex-direction: column;
     font-family: stereo-gothic-900;
+    align-items: center;
 }
 
 .form-first-row {
@@ -463,6 +478,11 @@
 
 .form-first-row input:focus {
     outline: none!important;
+
+}
+
+.form-first-row input:-webkit-autofill, .form-second-row input:-webkit-autofill{
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 .form-second-row {
@@ -502,7 +522,7 @@
     background-color: #191919;
     color: white;
     width: 18em;
-    height: 5em;
+    height: 10em;
     border-radius: 50px;
     margin-top: 3em;
     transition: background-color 0.5s ease;
