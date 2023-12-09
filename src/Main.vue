@@ -28,9 +28,9 @@
 
         <div class="about-me-img-tag">
 
-        <img class="about-me-img" src="src/components/photo2.jpg" width="650" height="670"/>
+        <img class="about-me-img" src="/src/components/photo2.jpg" width="650" height="670"/>
 
-        <img class="about-me-tag" ref="rotatingImage" src="src/components/icons/aboutMeTag.png"/>
+        <img class="about-me-tag" ref="rotatingImage" src="/src/components/icons/aboutMeTag.png"/>
 
         </div>
 
@@ -45,7 +45,7 @@
           </p>
 
 
-          <img class="intro-img" src="src/components/photo1.jpg" width="650" height="790"/>
+          <img class="intro-img" src="/src/components/photo1.jpg" width="650" height="790"/>
         </div>
       </div>
 
@@ -94,14 +94,14 @@
       <div class="my-skills">
         <h1>MY SKILLS</h1>
         <ul>
-          <li><img src="src/components/icons/java-logo.png" alt="Java" title="Java"></li>
-          <li><img src="src/components/icons/js-logo.png" alt="Javascript" title="Javascript"></li>
-          <li><img src="src/components/icons/ts-logo.png" alt="Typescript" title="Typescript"></li>
-          <li><img src="src/components/icons/kotlin-logo.png" alt="Kotlin" title="Kotlin"></li>
-          <li><img src="src/components/icons/mysql-logo.png" alt="MySQL" title="MySQL"></li>
-          <li><img src="src/components/icons/python-logo.png" alt="Python" title="Python"></li>
-          <li><img src="src/components/icons/php-logo.png" alt="PHP" title="PHP"></li>
-          <li><img src="src/components/icons/aws.png" alt="AWS" title="AWS"></li>
+          <li><img src="/src/components/icons/java-logo.png" alt="Java" title="Java"></li>
+          <li><img src="/src/components/icons/js-logo.png" alt="Javascript" title="Javascript"></li>
+          <li><img src="/src/components/icons/ts-logo.png" alt="Typescript" title="Typescript"></li>
+          <li><img src="/src/components/icons/kotlin-logo.png" alt="Kotlin" title="Kotlin"></li>
+          <li><img src="/src/components/icons/mysql-logo.png" alt="MySQL" title="MySQL"></li>
+          <li><img src="/src/components/icons/python-logo.png" alt="Python" title="Python"></li>
+          <li><img src="/src/components/icons/php-logo.png" alt="PHP" title="PHP"></li>
+          <li><img src="/src/components/icons/aws.png" alt="AWS" title="AWS"></li>
         </ul>
       </div>
 
@@ -112,40 +112,40 @@
         <ul class="portfolio-ul">
           <li class="portfolio-ul-li">
             <div class="portfolio-ul-li-img">
-              <img src="src/components/coffee-screen.png" width="450" >
+              <img src="/src/components/coffee-screen.png" width="450" >
             </div>
             <div class="portfolio-ul-li-text">
               <p class="portfolio-year">STARS CAFE / 2023</p>
               <h2 class="portfolio-name">Coffee Shop <br> Website</h2>
               <div class="portfolio-link">
                 <a href="https://github.com/alanoconner/stars-cafe">check on github</a>
-                <img src="src/components/go-to-btn.png" width="65">
+                <img src="/src/components/go-to-btn.png" width="65">
               </div>
             </div>
           </li>
           <li class="portfolio-ul-li">
             <div class="portfolio-ul-li-img">
-              <img src="src/components/airplane-screen.png" width="440" >
+              <img src="/src/components/airplane-screen.png" width="440" >
             </div>
             <div class="portfolio-ul-li-text">
               <p class="portfolio-year">VAADIN APP / 2021</p>
               <h2 class="portfolio-name">Ticket Reservation <br> Website</h2>
               <div class="portfolio-link">
                 <a href="https://github.com/alanoconner/java_Vaadin_ReservationApp">check on github</a>
-                <img src="src/components/go-to-btn.png" width="65">
+                <img src="/src/components/go-to-btn.png" width="65">
               </div>
             </div>
           </li>
           <li class="portfolio-ul-li">
             <div class="portfolio-ul-li-img">
-              <img src="src/components/messenger-screen.png" width="350">
+              <img src="/src/components/messenger-screen.png" width="350">
             </div>
             <div class="portfolio-ul-li-text">
               <p class="portfolio-year">JAVA MESSENGER / 2020</p>
               <h2 class="portfolio-name">Desktop Messenger <br> Application</h2>
               <div class="portfolio-link">
                 <a href="https://github.com/alanoconner/java_messenger">check on github</a>
-                <img src="src/components/go-to-btn.png" width="65">
+                <img src="/src/components/go-to-btn.png" width="65">
               </div>
             </div>
           </li>
