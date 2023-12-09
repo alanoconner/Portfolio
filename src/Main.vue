@@ -165,7 +165,7 @@
             <p class="experience-text-p">
               During my internship as a Data Scientist, I was introduced into world of data analytics and machine learning. I learned about algorithms and technics of extracting meaningful insights from the data.</p>
             <div class="experience-link">
-              <a href="">Website</a>
+              <a href="https://lycomm.co.jp/ja/">Website</a>
             </div>
           </div>
 
@@ -174,7 +174,7 @@
             <h2 class="experience-name">Web Developer Intern</h2>
             <p class="experience-text-p">My role as a Web Developer honed my skills in creating dynamic and responsive web applications. I navigated the intersection of data and technology, showcasing my commitment to delivering impactful solutions.</p>
             <div class="experience-link">
-              <a href="">Website</a>
+              <a href="https://small-step.jp/">Website</a>
             </div>
           </div>
 
